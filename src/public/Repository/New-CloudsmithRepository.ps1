@@ -1,4 +1,4 @@
-function New-CloudSmithRepository {
+function New-CloudsmithRepository {
     <#
     .SYNOPSIS
     Create a new Cloudsmith Repository
@@ -28,7 +28,7 @@ function New-CloudSmithRepository {
     If checked, files contained in packages will be indexed, which increase the synchronisation time required for packages. Note that it is recommended you keep this enabled unless the synchronisation time is significantly impacted.
     
     .EXAMPLE
-    New-CloudSmithRepository -Owner yourusername -Name api-test -Type Public -Slug test-api-repo -Description 'Testing creation from API' 
+    New-CloudsmithRepository -Owner yourusername -Name api-test -Type Public -Slug test-api-repo -Description 'Testing creation from API' 
     
     .NOTES
     General notes
@@ -68,7 +68,7 @@ function New-CloudSmithRepository {
 
     begin {
         if(-not $header){
-            throw "Not connected to CloudSmith API! Run Connect-CloudSmithInstance first!"
+            throw "Not connected to Cloudsmith API! Run Connect-CloudsmithInstance first!"
         }
     }
 
@@ -101,6 +101,6 @@ function New-CloudSmithRepository {
             $Body.Add('index_files',[bool]'True')
         }
 
-        Invoke-CloudSmith -Slug $endpoint -Method 'POST' -Body $Body
+        Invoke-Cloudsmith -Slug $endpoint -Method 'POST' -Body $Body
     }
 }

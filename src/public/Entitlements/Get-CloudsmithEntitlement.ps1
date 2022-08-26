@@ -19,7 +19,7 @@ function Get-CloudsmithEntitlement {
     Show token in plain-text in returned results (Defaults to false)
     
     .EXAMPLE
-    Get-CloudSmithEntitlement -Owner your-username -Repository your-repository
+    Get-CloudsmithEntitlement -Owner your-username -Repository your-repository
 
     .EXAMPLE
     Get-CloudsmithEntitlement -Owner your-username -Repository your-repository -Name TokenIdentifier

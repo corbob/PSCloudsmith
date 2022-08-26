@@ -34,7 +34,7 @@ function Set-CloudsmithRepository {
 
     begin {
         if(-not $header){
-            throw "Not connected to CloudSmith API! Run Connect-CloudSmithInstance first!"
+            throw "Not connected to Cloudsmith API! Run Connect-CloudsmithInstance first!"
         }
     }
 

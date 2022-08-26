@@ -1,10 +1,10 @@
 function Remove-CloudsmithRepository {
     <#
     .SYNOPSIS
-    Removes a CloudSmith Repository
+    Removes a Cloudsmith Repository
     
     .DESCRIPTION
-    Removes a CloudSmith Repository
+    Removes a Cloudsmith Repository
     
     .PARAMETER Owner
     The namespace or owner of the repository (Likely your username)
@@ -39,7 +39,7 @@ function Remove-CloudsmithRepository {
 
     begin { 
         if (-not $header) { 
-            throw "Not connected to CloudSmith API! Run Connect-CloudsmithInstance first!"
+            throw "Not connected to Cloudsmith API! Run Connect-CloudsmithInstance first!"
         }
     }
 
@@ -52,13 +52,13 @@ function Remove-CloudsmithRepository {
             if ($Force -and -not $Confirm) {
                 $ConfirmPreference = 'None'
                 if ($PSCmdlet.ShouldProcess("$_", "Remove Repository")){
-                    Invoke-CloudSmith -Slug $endpoint -Method 'DELETE'
+                    Invoke-Cloudsmith -Slug $endpoint -Method 'DELETE'
                 }
             }
 
             else {
                 if($PSCmdlet.ShouldProcess("$_","Remove Repository")){
-                    Invoke-CloudSmith -Slug $endpoint -Method 'DELETE'
+                    Invoke-Cloudsmith -Slug $endpoint -Method 'DELETE'
                 }
             }
         }

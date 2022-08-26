@@ -1,10 +1,10 @@
 function Get-CloudsmithRepository {
     <#
     .SYNOPSIS
-    Retrieve CloudSmith repository information
+    Retrieve Cloudsmith repository information
     
     .DESCRIPTION
-    Retrieve CloudSmith repository Information
+    Retrieve Cloudsmith repository Information
     
     .PARAMETER Namespace
     The namespace to retrieve repository information from
@@ -34,7 +34,7 @@ function Get-CloudsmithRepository {
     )
     begin {
         if(-not $header){
-            throw "Not connected to CloudSmith API!"
+            throw "Not connected to Cloudsmith API!"
         }
     }
     process {

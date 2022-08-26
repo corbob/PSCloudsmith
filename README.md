@@ -10,8 +10,8 @@ A fresh copy of the module will be placed in `Output\Cloudsmith`
 
 ## Testing the module
 
-Run `Import-Module ./Output/PSCloudSmith/PSCloudsmith.psd1 -Force`
-Verify with `Get-Command -Module PSCloudSmith`
+Run `Import-Module ./Output/PSCloudsmith/PSCloudsmith.psd1 -Force`
+Verify with `Get-Command -Module PSCloudsmith`
 
 **Make sure you run `Connect-CloudsmithInstance` before attempting any other commands!**
 

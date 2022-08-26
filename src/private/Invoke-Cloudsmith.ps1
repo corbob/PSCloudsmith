@@ -1,4 +1,4 @@
-function Invoke-CloudSmith {
+function Invoke-Cloudsmith {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory)]

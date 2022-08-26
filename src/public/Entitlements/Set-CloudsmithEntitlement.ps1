@@ -1,4 +1,4 @@
-function Set-CloudSmithEntitlement {
+function Set-CloudsmithEntitlement {
     [CmdletBinding()]
     Param(
         [Parameter(Mandatory)]

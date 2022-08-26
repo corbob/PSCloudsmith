@@ -28,6 +28,6 @@ function Connect-CloudsmithInstance {
         }
     }
 
-    Write-Host "Successfully authenticated to CloudSmith" -ForegroundColor Green
+    Write-Host "Successfully authenticated to Cloudsmith" -ForegroundColor Green
 
 }
